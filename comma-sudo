@@ -29,7 +29,8 @@ PRE=/data/data/com.termux/files
 ROOT_HOME=/data/comma/home
 BINPRE=/data/comma/usr/bin
 LDLP="export LD_LIBRARY_PATH=/system64/lib:/data/comma/usr/lib"
-CMDLINE="PATH=/data/comma/usr/bin:/data/comma/usr/sbin:/data/comma/usr/bin/applets:$SYSXBIN:$SYSBIN;$LDLP;HOME=$ROOT_HOME;cd $PWD"
+LDPRE="export LD_PRELOAD=/data/comma/usr/lib/libiconv.so"
+CMDLINE="PATH=/data/comma/usr/local/bin:/data/comma/usr/bin:/data/comma/usr/sbin:/data/comma/usr/bin/applets:$SYSXBIN:$SYSBIN;$LDPRE;$LDLP;HOME=$ROOT_HOME;cd $PWD"
 
 if [ -x /magisk/.core/bin/su ]; then
 	SU=/magisk/.core/bin/su
