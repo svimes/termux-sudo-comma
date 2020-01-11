@@ -26,10 +26,10 @@ SYSBIN=/system/bin
 SYSXBIN=/system/xbin
 BB=$SYSXBIN/busybox
 PRE=/data/data/com.termux/files
-ROOT_HOME=$PRE/home/.suroot
-BINPRE=$PRE/usr/bin
-LDLP="export LD_LIBRARY_PATH=$PRE/usr/lib"
-CMDLINE="PATH=$PATH:$SYSXBIN:$SYSBIN;$LDLP;HOME=$ROOT_HOME;cd $PWD"
+ROOT_HOME=/data/comma/home
+BINPRE=/data/comma/usr/bin
+LDLP="export LD_LIBRARY_PATH=/system64/lib:/data/comma/usr/lib"
+CMDLINE="PATH=/data/comma/usr/bin:/data/comma/usr/sbin:/data/comma/usr/bin/applets:$SYSXBIN:$SYSBIN;$LDLP;HOME=$ROOT_HOME;cd $PWD"
 
 if [ -x /magisk/.core/bin/su ]; then
 	SU=/magisk/.core/bin/su
